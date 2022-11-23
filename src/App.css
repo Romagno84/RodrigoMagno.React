@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    
+}
+
+body{
+    background-image: url(../Image/verter-cerveza-espuma-burbuja-vidrio-fondo_53089-87.jpg.webp)
+
+}
+
+.header .nav-links{
+    display: inline-block;
+    padding: 0 20px;  
+    transition: all 0.3s ease 0s;  
+}
+
+.header .nav-links:hover{
+    transform: scale(1.1);
+    color: rgb(177, 211, 223);
+  
+}
+
+.cart {
+    margin-right: -40px;
+    font-weight: 700;
+    padding: 9px 25px;
+    background-image: url(../Image/verter-cerveza-espuma-burbuja-vidrio-fondo_53089-87.webp);
+    border: none;
+    border-radius: 60px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.cart button:hover{
+    transform: scale(1.1);
+    background-color:  rgb(255, 248, 55);
+}
