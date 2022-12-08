@@ -1,9 +1,13 @@
-const CartWidget = () => {
-    return (
-        <>    
-          <a class="cart" href="#"><button>🛒<spam id="CantidadDeItemsEnCarrito"> 0</spam></button></a>  
-        </>   
+import { BsCart2 } from "react-icons/bs";
+const cartWidget = ()=>{
+    return(
+        <>
+        
+        <p><BsCart2/></p>
+        
+        </>
+
     )
-  }
-  
-  export default CartWidget;
+}
+
+export default cartWidget;
