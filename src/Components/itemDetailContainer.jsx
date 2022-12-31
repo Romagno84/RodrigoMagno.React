@@ -1,21 +1,39 @@
 import { useEffect } from "react";
-import { useState } from "react";
-import ItemList from "./ItemList";
-import { data } from "../utils/data";
-import { customFetch } from "../utils/customFetch";
+import { useState } from "react"
+import ItemDetail from "./ItemDetail";
+import { useParams } from "react-router-dom";
+import { db } from "../utils/firebaseConfig";
+import { doc, getDoc } from "firebase/firestore"
 
-const ItemListContainer = () =>{
-    const [datos,setDatos] = useState([]);
 
-     useEffect(() =>{
-      customFetch(2000,data)
-      .then(response => setDatos (response))
-      .catch(err => console.log(err))
-     },[])
+const ItemlDetailContainer = () => {
+    const [dato,setDato] = useState({});
+    const { idItem } = useParams ();
+    
+
+    useEffect(()=>{
+        const fetchOneFromFireStore = async () => {
+        const docRef = doc(db, "Productos", idItem);
+        const docSnap = await getDoc(docRef);
+
+        if (docSnap.exists()) {
+           return{
+            id : idItem,
+            ...docSnap.data()
+           }
+        } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+        }
+    }
+        fetchOneFromFireStore()
+        .then(result => setDato(result))
+        .catch(err => console.log(err))
+    },[]);
 
     return(
-        <ItemList datos = {datos}/>
-    )
+        <ItemDetail item={dato}/>
+    );
 }
 
-export default ItemListContainer;
+export default ItemlDetailContainer

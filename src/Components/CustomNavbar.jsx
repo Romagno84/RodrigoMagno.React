@@ -10,7 +10,7 @@ const CustomNavbar = () => {
         <header>
              <Navbar className="navBar">
                  <Container>
-                <Navbar.Brand><Link to="/"><img
+                <Navbar.Brand><Link to="/" className="Logo"><img
                     src="../Image/logo.png"
                     width="100"
                     height="100"
@@ -19,14 +19,14 @@ const CustomNavbar = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="nav-links">
-                    <Nav.Link><Link to="/categoryId/1">Cervezas</Link></Nav.Link>
-                    <Nav.Link><Link to="/categoryId/2">Vinos</Link></Nav.Link>
+                    <Nav.Link><Link to="/category/Cervezas" className='navLinks'>Cervezas</Link></Nav.Link>
+                    <Nav.Link><Link to="/category/Vinos" className='navLinks'>Vinos</Link></Nav.Link>
                     <NavDropdown title="Un Poquito de Todo" id="basic-nav-dropdown">
-                    <NavDropdown.Item><Link to="/categoryId/3">Aperitivos</Link></NavDropdown.Item>
-                    <NavDropdown.Item><Link to="/categoryId/4">
+                    <NavDropdown.Item><Link to="/category/Aperitivos" className='navLinks'>Aperitivos</Link></NavDropdown.Item>
+                    <NavDropdown.Item><Link to="/category/Champagne" className='navLinks'>
                         Champagne
                      </Link></NavDropdown.Item>
-                    <NavDropdown.Item><Link to="/category/5">Packs</Link></NavDropdown.Item>
+                    <NavDropdown.Item><Link to="/category/Packs"className='navLinks' >Packs</Link></NavDropdown.Item>
                     </NavDropdown>
                 </Nav>
                 </Navbar.Collapse>

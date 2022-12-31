@@ -1,3 +1,4 @@
+
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
@@ -5,8 +6,6 @@ import { Link } from 'react-router-dom';
 const Item = (props)=>{
     return(
         <>
-           
-
             <Card  style={{ width: '18rem' }}>
       <Card.Img variant="top" src={props.imagen} className="imagenCarta" />
       <Card.Body>
