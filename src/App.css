@@ -225,8 +225,6 @@ body{
 
 }
 
-/*ventana Carrito*/
-
 .carritoContainer {
     display: flex;
     flex-direction: column;
@@ -289,7 +287,6 @@ body{
     transition: 0.5s;
 }
 
-/*Compra Final*/
 .cartaFinalizarHeader{
     color: rgb(59, 17, 243);
     font-size: 1.5em;

@@ -22,7 +22,7 @@ const ItemlDetailContainer = () => {
             ...docSnap.data()
            }
         } else {
-        // doc.data() will be undefined in this case
+        
         console.log("No such document!");
         }
     }
